@@ -36,7 +36,7 @@ int main()
 	{
 		system("cls");
 		string sNam = "";
-		string sId = 0;
+		string sId = "";
 		float sA1 = 0.0f;
 		float sA2 = 0.0f;
 		float sA3 = 0.0f;
@@ -110,14 +110,34 @@ int main()
 	float a3total = 0;
 	float a3average = 0;
 
+	string ht;
+	string ha;
+	float highestTotal = 0.0;
+	float highestAverage = 0.0;
+
 	for (int i = 0; i < students.size(); i++) 
 	{
 		cout << "\n" << students[i].name << " (ID: " << students[i].id << ") Scored " << students[i].assessment1 << "% for assessment 1, " << students[i].assessment2 << "% for assessment 2 and " << students[i].assessment3 << "% for assessment 3!";
 		a1total += students[i].assessment1;
 		a2total += students[i].assessment2;
 		a3total += students[i].assessment3;
-		cout << "\n\n" << students[i].name << " got " << (students[i].assessment1 + students[i].assessment2 + students[i].assessment3) << " marks total!";
-		cout << "\n" << students[i].name << " got an average mark of " << ((students[i].assessment1 + students[i].assessment2 + students[i].assessment3) / 3) << "%\n";
+
+		float total = students[i].assessment1 + students[i].assessment2 + students[i].assessment3;
+
+		cout << "\n\n" << students[i].name << " got " << total << " marks total!";
+		cout << "\n" << students[i].name << " got an average mark of " << (students[i].assessment1 + students[i].assessment2 + students[i].assessment3 / 3) << "%\n";
+
+		if (total > highestTotal) 
+		{
+			highestTotal = total;
+			ht = students[i].name;
+		}
+
+		if (total / 3 > highestAverage) 
+		{
+			highestAverage = total / 3;
+			ha = students[i].name;
+		}
 
 		system("pause");
 		system("cls");
@@ -131,4 +151,7 @@ int main()
 	cout << "\nClasses total score for assessment 1 is " << a1total << "%\nClasses total score for assessment 2 is " << a2total << "%\nClasses total score for assessment 3 is " << a3total << "%";
 	cout << "\n=====[ AVERAGES ]=====\n";
 	cout << "\nClasses average score for assessment 1 is " << a1average << "%\nClasses average score for assessment 2 is " << a2average << "%\nClasses average score for assessment 3 is " << a3average << "%";
+	cout << "\n=====[ ADDITIONAL INFORMATION ]=====\n";
+	cout << "\n" << ht << " got the highest total mark of " << highestTotal;
+	cout << "\n" << ha << " got the highest average mark of " << highestAverage << "%";
 }
