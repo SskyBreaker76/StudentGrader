@@ -7,15 +7,15 @@ using namespace std;
 class Student
 {
 public:
-	Student(string, int, float, float, float);
+	Student(string, string, float, float, float);
 	string name;
-	int id;
+	string id;
 	float assessment1;
 	float assessment2;
 	float assessment3;
 };
 
-Student::Student(string n, int i, float a1, float a2, float a3)
+Student::Student(string n, string i, float a1, float a2, float a3)
 {
 	name = n;
 	id = i;
@@ -36,7 +36,7 @@ int main()
 	{
 		system("cls");
 		string sNam = "";
-		int sId = 0;
+		string sId = 0;
 		float sA1 = 0.0f;
 		float sA2 = 0.0f;
 		float sA3 = 0.0f;
