@@ -1,4 +1,5 @@
 #include <iostream>
+#include <string>
 #include <vector>
 
 using namespace std;
@@ -44,7 +45,7 @@ int main()
 		cout << "\n=====[ STUDENT " << sNum << " ]=====\n\n";
 
 		cout << "Student Name: ";
-		cin >> sNam;
+		getline(cin >> ws, sNam);
 
 		cout << "Student ID: ";
 		cin >> sId;
