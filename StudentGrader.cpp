@@ -112,10 +112,14 @@ int main()
 
 	for (int i = 0; i < students.size(); i++) 
 	{
+		system("pause");
+		system("cls");
 		cout << "\n" << students[i].name << " (ID: " << students[i].id << ") Scored " << students[i].assessment1 << "% for assessment 1, " << students[i].assessment2 << "% for assessment 2 and " << students[i].assessment3 << "% for assessment 3!";
 		a1total += students[i].assessment1;
 		a2total += students[i].assessment2;
 		a3total += students[i].assessment3;
+		cout << "\n\n" << students[i].name << " got " << (students[i].assessment1 + students[i].assessment2 + students[i].assessment3) << " marks total!";
+		cout << "\n" << students[i].name << " got an average mark of " << ((students[i].assessment1 + students[i].assessment2 + students[i].assessment3) / 3) << "%\n";
 	}
 
 	a1average = a1total / students.size();
