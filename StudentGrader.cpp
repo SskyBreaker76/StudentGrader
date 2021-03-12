@@ -49,14 +49,35 @@ int main()
 		cout << "Student ID: ";
 		cin >> sId;
 
+		a1Percent:
 		cout << "Assessment 1 Percentage: ";
 		cin >> sA1;
 
+		if (sA1 > 100 || sA2 < 0) 
+		{
+			cout << "Students grade must be between 0 and 100!\n";
+			goto a1Percent;
+		}
+
+		a2Percent:
 		cout << "Assessment 2 Percentage: ";
 		cin >> sA2;
 
+		if (sA2 > 100 || sA2 < 0)
+		{
+			cout << "Students grade must be between 0 and 100!\n";
+			goto a1Percent;
+		}
+
+		a3Percent:
 		cout << "Assessment 3 Percentage: ";
 		cin >> sA3;
+
+		if (sA3 > 100 || sA3 < 0)
+		{
+			cout << "Students grade must be between 0 and 100!\n";
+			goto a1Percent;
+		}
 
 		Student student = Student(sNam, sId, sA1, sA2, sA3);
 
