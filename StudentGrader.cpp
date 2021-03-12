@@ -34,6 +34,7 @@ int main()
 
 	while (run == true) 
 	{
+		system("cls");
 		string sNam = "";
 		int sId = 0;
 		float sA1 = 0.0f;
@@ -76,6 +77,8 @@ int main()
 
 		sNum++;
 	}
+
+	system("cls");
 
 	float a1total = 0;
 	float a1average = 0;
