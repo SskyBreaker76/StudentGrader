@@ -149,7 +149,7 @@ int main()
 	a3average = a3total / students.size();
 
 	cout << "\n=====[ TOTALS ]=====\n";
-	cout << "\nClasses total score for assessment 1 is " << a1total << "%\nClasses total score for assessment 2 is " << a2total << "%\nClasses total score for assessment 3 is " << a3total << "%";
+	cout << "\nClasses total score for assessment 1 is " << a1total << "\nClasses total score for assessment 2 is " << a2total << "\nClasses total score for assessment 3 is " << a3total;
 	cout << "\n=====[ AVERAGES ]=====\n";
 	cout << "\nClasses average score for assessment 1 is " << a1average << "%\nClasses average score for assessment 2 is " << a2average << "%\nClasses average score for assessment 3 is " << a3average << "%";
 	cout << "\n=====[ ADDITIONAL INFORMATION ]=====\n";
