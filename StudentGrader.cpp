@@ -53,7 +53,7 @@ int main()
 		cout << "Assessment 1 Percentage: ";
 		cin >> sA1;
 
-		if (sA1 > 100 || sA2 < 0) 
+		if (sA1 > 100 || sA1 < 0) 
 		{
 			cout << "Students grade must be between 0 and 100!\n";
 			goto a1Percent;
